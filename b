@@ -1,49 +1,18 @@
-En base al análisis de todos los archivos proporcionados (CSV y PDF de seguridad cloud), genera un documento completo listo para pegar directamente en Word.
+En base a los archivos proporcionados, no generes un informe final.
 
-El documento debe estar estructurado y pensado como un working document para equipo de seguridad que va a usarlo en reuniones con cliente.
+Quiero que actúes como un asistente de análisis de seguridad cloud que me vaya guiando paso a paso mientras reviso el entorno.
 
-No quiero explicaciones sueltas ni resumen de archivos. Quiero un documento final.
+Divide el análisis en pequeñas etapas accionables para que pueda ir validando manualmente en el tenant.
 
-Estructura obligatoria:
+Estructura:
 
-1. Título y contexto del análisis
-- objetivo del trabajo
-- entorno cloud analizado (AWS, OpenShift/Kubernetes, VMs, contenedores, IAM, secretos)
+1. Primer paso: qué debo revisar primero en el entorno (prioridad real de exploración)
+2. Qué señales o problemas debo buscar en IAM, exposición, OpenShift/Kubernetes, VMs y secretos
+3. Lista de “cosas sospechosas” típicas que debo intentar encontrar
+4. Qué validaciones rápidas puedo hacer para confirmar si algo es un riesgo real o ruido
+5. Siguientes pasos dependiendo de lo que encuentre (ramificación del análisis)
 
-2. Visión general del entorno
-- resumen claro de la arquitectura y componentes principales
-
-3. Áreas de análisis
-Organizado por:
-- identidad y accesos (IAM)
-- exposición de servicios
-- red y segmentación
-- contenedores / OpenShift / Kubernetes
-- máquinas virtuales
-- gestión de secretos
-
-4. Principales hallazgos agrupados
-No listar findings individuales, sino agruparlos en problemas o patrones de seguridad.
-
-5. Riesgos principales identificados
-Explicar los riesgos reales derivados del análisis (ej: escalada de privilegios, exposición, movimiento lateral, mala segmentación, etc.).
-
-6. Escenarios de ataque
-Describir 2-3 escenarios realistas de cómo un atacante podría comprometer el entorno.
-
-7. Preguntas para cliente
-Incluir preguntas técnicas claras para validar los hallazgos con el cliente.
-
-8. Puntos pendientes de validación
-Qué información falta para confirmar los riesgos detectados.
-
-Formato:
-- listo para copiar en Word
-- con títulos claros
-- sin formato complejo
-- estilo profesional de consultoría de seguridad cloud
-
-Reglas:
-- no inventar datos no presentes en los archivos
-- no dar conclusiones absolutas si no están soportadas
-- priorizar claridad y utilidad para reuniones con cliente
+Importante:
+- No quiero un informe completo
+- Quiero una guía progresiva tipo checklist inteligente
+- El objetivo es aprender a identificar riesgos mientras exploro el entorno
